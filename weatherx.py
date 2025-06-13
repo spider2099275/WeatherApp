@@ -5,7 +5,7 @@ from PIL import ImageTk, Image
 
 def data_get():
     state = state_name.get()
-    data = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+state+"&appid=b0eb38b9685dd277b8910725edf0dec6&units=metric").json()
+    data = requests.get("https://api.openweathermap.org/data/2.5/weather?q="+state+"your_api_id").json()
     w1_label.config(text=data["weather"][0]["description"])
     ct1_label.config(text=data["main"]["temp"])
     ctfl1_label.config(text=data["main"]["feels_like"])
